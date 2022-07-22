@@ -34,6 +34,9 @@ namespace informatik3projekt {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::CheckBox^  checkBox1;
+	private: System::Windows::Forms::ComboBox^  comboBox1;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,11 +51,40 @@ namespace informatik3projekt {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MyForm1";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->SuspendLayout();
+			// 
+			// checkBox1
+			// 
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->Location = System::Drawing::Point(0, 0);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(150, 29);
+			this->checkBox1->TabIndex = 0;
+			this->checkBox1->Text = L"checkBox1";
+			this->checkBox1->UseVisualStyleBackColor = true;
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Location = System::Drawing::Point(49, 60);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(121, 33);
+			this->comboBox1->TabIndex = 1;
+			// 
+			// MyForm1
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(274, 229);
+			this->Controls->Add(this->comboBox1);
+			this->Controls->Add(this->checkBox1);
+			this->Name = L"MyForm1";
+			this->Text = L"MyForm1";
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
 		}
 #pragma endregion
 	};
