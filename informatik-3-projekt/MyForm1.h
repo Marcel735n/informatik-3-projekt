@@ -1,4 +1,7 @@
 #pragma once
+#include "MyForm2.h"
+
+
 
 namespace informatik3projekt {
 
@@ -71,7 +74,7 @@ namespace informatik3projekt {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(117, 40);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"button1";
+			this->button1->Text = L"Suche";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm1::button1_Click);
 			// 
@@ -92,6 +95,7 @@ namespace informatik3projekt {
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"button3";
 			this->button3->UseVisualStyleBackColor = true;
+			
 			// 
 			// button4
 			// 
@@ -110,18 +114,22 @@ namespace informatik3projekt {
 			this->button5->TabIndex = 4;
 			this->button5->Text = L"button5";
 			this->button5->UseVisualStyleBackColor = true;
+			
 			// 
 			// MyForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::Control;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1220, 725);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
+			this->DoubleBuffered = true;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"MyForm1";
@@ -131,6 +139,11 @@ namespace informatik3projekt {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		MyForm2^ FensterSuchen = gcnew MyForm2();
+		FensterSuchen->ShowDialog();
+		
+			
 	}
-	};
+	
+};
 }

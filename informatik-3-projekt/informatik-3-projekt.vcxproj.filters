@@ -18,10 +18,21 @@
     <ClCompile Include="MyForm1.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="MyForm2.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm1.h">
       <Filter>Quelldateien</Filter>
     </ClInclude>
+    <ClInclude Include="MyForm2.h">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MyForm1.resx">
+      <Filter>Ressourcendateien</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
