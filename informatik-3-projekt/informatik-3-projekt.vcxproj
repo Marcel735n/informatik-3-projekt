@@ -135,10 +135,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\Funktionen.cpp" />
+    <ClCompile Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\Hauptprogramm.cpp" />
     <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="MyForm2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\Bauteil_lib.h" />
+    <ClInclude Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\Funktionen.h" />
     <ClInclude Include="MyForm1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -153,6 +157,9 @@
     <EmbeddedResource Include="MyForm2.resx">
       <DependentUpon>MyForm2.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\datenbank.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

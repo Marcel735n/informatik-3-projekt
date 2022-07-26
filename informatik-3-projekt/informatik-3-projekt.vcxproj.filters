@@ -21,6 +21,12 @@
     <ClCompile Include="MyForm2.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\Funktionen.cpp">
+      <Filter>Ressourcendateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\Hauptprogramm.cpp">
+      <Filter>Ressourcendateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm1.h">
@@ -29,10 +35,24 @@
     <ClInclude Include="MyForm2.h">
       <Filter>Quelldateien</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\Bauteil_lib.h">
+      <Filter>Ressourcendateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\Funktionen.h">
+      <Filter>Ressourcendateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm1.resx">
       <Filter>Ressourcendateien</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm2.resx">
+      <Filter>Ressourcendateien</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\datenbank.txt">
+      <Filter>Ressourcendateien</Filter>
+    </Text>
   </ItemGroup>
 </Project>
