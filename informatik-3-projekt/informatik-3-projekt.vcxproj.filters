@@ -15,12 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\Funktionen.cpp">
-      <Filter>Ressourcendateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\Hauptprogramm.cpp">
-      <Filter>Ressourcendateien</Filter>
-    </ClCompile>
     <ClCompile Include="MainForm.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -37,10 +31,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MyForm1.resx">
-      <Filter>Ressourcendateien</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyForm2.resx">
+    <EmbeddedResource Include="MainForm.resx">
       <Filter>Ressourcendateien</Filter>
     </EmbeddedResource>
   </ItemGroup>
