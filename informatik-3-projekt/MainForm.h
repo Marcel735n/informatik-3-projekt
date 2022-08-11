@@ -72,8 +72,8 @@ namespace informatik3projekt {
 
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::Label^  label6;
-	private: System::Windows::Forms::Label^  label7;
-	private: System::Windows::Forms::Label^  Name;
+
+
 
 
 
@@ -99,9 +99,43 @@ namespace informatik3projekt {
 	private: System::Windows::Forms::Label^  label9;
 	private: System::Windows::Forms::ListBox^  listBox2;
 	private: System::Windows::Forms::Label^  label11;
+	private: System::Windows::Forms::Label^  label29;
+	private: System::Windows::Forms::ComboBox^  comboBox9;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::ComboBox^  comboBox10;
+	private: System::Windows::Forms::Label^  label24;
+	private: System::Windows::Forms::ComboBox^  comboBox11;
+	private: System::Windows::Forms::Label^  label25;
+	private: System::Windows::Forms::ComboBox^  comboBox12;
+	private: System::Windows::Forms::Label^  label26;
+	private: System::Windows::Forms::ComboBox^  comboBox13;
+	private: System::Windows::Forms::Label^  label27;
+	private: System::Windows::Forms::ComboBox^  comboBox14;
+	private: System::Windows::Forms::Label^  label28;
+	private: System::Windows::Forms::Label^  label23;
+	private: System::Windows::Forms::ComboBox^  comboBox8;
+	private: System::Windows::Forms::Label^  label22;
+	private: System::Windows::Forms::Label^  label21;
+	private: System::Windows::Forms::Label^  label20;
+	private: System::Windows::Forms::ComboBox^  comboBox7;
+	private: System::Windows::Forms::Label^  label19;
+	private: System::Windows::Forms::ComboBox^  comboBox6;
+	private: System::Windows::Forms::Label^  label18;
+	private: System::Windows::Forms::ComboBox^  comboBox5;
+	private: System::Windows::Forms::Label^  label17;
+	private: System::Windows::Forms::ComboBox^  comboBox4;
+	private: System::Windows::Forms::Label^  label16;
+	private: System::Windows::Forms::ComboBox^  comboBox3;
+	private: System::Windows::Forms::Label^  label15;
+	private: System::Windows::Forms::ComboBox^  comboBox2;
 	private: System::Windows::Forms::Label^  label14;
 	private: System::Windows::Forms::ComboBox^  comboBox1;
-	private: System::Windows::Forms::ComboBox^  comboBox2;
+	private: System::Windows::Forms::Label^  Name;
+private: System::Windows::Forms::Button^  button9;
+
+
+
+
 
 
 
@@ -148,11 +182,38 @@ namespace informatik3projekt {
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->comboBox9 = (gcnew System::Windows::Forms::ComboBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->comboBox10 = (gcnew System::Windows::Forms::ComboBox());
+			this->label24 = (gcnew System::Windows::Forms::Label());
+			this->comboBox11 = (gcnew System::Windows::Forms::ComboBox());
+			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->comboBox12 = (gcnew System::Windows::Forms::ComboBox());
+			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->comboBox13 = (gcnew System::Windows::Forms::ComboBox());
+			this->label27 = (gcnew System::Windows::Forms::Label());
+			this->comboBox14 = (gcnew System::Windows::Forms::ComboBox());
+			this->label28 = (gcnew System::Windows::Forms::Label());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->comboBox8 = (gcnew System::Windows::Forms::ComboBox());
+			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->label21 = (gcnew System::Windows::Forms::Label());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->comboBox7 = (gcnew System::Windows::Forms::ComboBox());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->comboBox6 = (gcnew System::Windows::Forms::ComboBox());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->comboBox5 = (gcnew System::Windows::Forms::ComboBox());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->Name = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -167,6 +228,7 @@ namespace informatik3projekt {
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel3->SuspendLayout();
@@ -342,11 +404,39 @@ namespace informatik3projekt {
 			// 
 			this->panel2->AutoScroll = true;
 			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->panel2->Controls->Add(this->button9);
+			this->panel2->Controls->Add(this->label29);
+			this->panel2->Controls->Add(this->comboBox9);
+			this->panel2->Controls->Add(this->label7);
+			this->panel2->Controls->Add(this->comboBox10);
+			this->panel2->Controls->Add(this->label24);
+			this->panel2->Controls->Add(this->comboBox11);
+			this->panel2->Controls->Add(this->label25);
+			this->panel2->Controls->Add(this->comboBox12);
+			this->panel2->Controls->Add(this->label26);
+			this->panel2->Controls->Add(this->comboBox13);
+			this->panel2->Controls->Add(this->label27);
+			this->panel2->Controls->Add(this->comboBox14);
+			this->panel2->Controls->Add(this->label28);
+			this->panel2->Controls->Add(this->label23);
+			this->panel2->Controls->Add(this->comboBox8);
+			this->panel2->Controls->Add(this->label22);
+			this->panel2->Controls->Add(this->label21);
+			this->panel2->Controls->Add(this->label20);
+			this->panel2->Controls->Add(this->comboBox7);
+			this->panel2->Controls->Add(this->label19);
+			this->panel2->Controls->Add(this->comboBox6);
+			this->panel2->Controls->Add(this->label18);
+			this->panel2->Controls->Add(this->comboBox5);
+			this->panel2->Controls->Add(this->label17);
+			this->panel2->Controls->Add(this->comboBox4);
+			this->panel2->Controls->Add(this->label16);
+			this->panel2->Controls->Add(this->comboBox3);
+			this->panel2->Controls->Add(this->label15);
 			this->panel2->Controls->Add(this->comboBox2);
 			this->panel2->Controls->Add(this->label14);
 			this->panel2->Controls->Add(this->comboBox1);
 			this->panel2->Controls->Add(this->Name);
-			this->panel2->Controls->Add(this->label7);
 			this->panel2->Controls->Add(this->label5);
 			this->panel2->Controls->Add(this->button6);
 			this->panel2->Controls->Add(this->label1);
@@ -358,10 +448,258 @@ namespace informatik3projekt {
 			this->panel2->TabIndex = 3;
 			this->panel2->Visible = false;
 			// 
+			// label29
+			// 
+			this->label29->AutoSize = true;
+			this->label29->Location = System::Drawing::Point(1017, 780);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(101, 17);
+			this->label29->TabIndex = 46;
+			this->label29->Text = L"(*) Pflichtfelder";
+			// 
+			// comboBox9
+			// 
+			this->comboBox9->FormattingEnabled = true;
+			this->comboBox9->Location = System::Drawing::Point(71, 668);
+			this->comboBox9->Name = L"comboBox9";
+			this->comboBox9->Size = System::Drawing::Size(121, 24);
+			this->comboBox9->TabIndex = 45;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(68, 645);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(86, 17);
+			this->label7->TabIndex = 44;
+			this->label7->Text = L"Internetseite";
+			// 
+			// comboBox10
+			// 
+			this->comboBox10->FormattingEnabled = true;
+			this->comboBox10->Location = System::Drawing::Point(258, 585);
+			this->comboBox10->Name = L"comboBox10";
+			this->comboBox10->Size = System::Drawing::Size(121, 24);
+			this->comboBox10->TabIndex = 43;
+			// 
+			// label24
+			// 
+			this->label24->AutoSize = true;
+			this->label24->Location = System::Drawing::Point(255, 562);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(28, 17);
+			this->label24->TabIndex = 42;
+			this->label24->Text = L"Ort";
+			// 
+			// comboBox11
+			// 
+			this->comboBox11->FormattingEnabled = true;
+			this->comboBox11->Location = System::Drawing::Point(73, 585);
+			this->comboBox11->Name = L"comboBox11";
+			this->comboBox11->Size = System::Drawing::Size(121, 24);
+			this->comboBox11->TabIndex = 41;
+			// 
+			// label25
+			// 
+			this->label25->AutoSize = true;
+			this->label25->Location = System::Drawing::Point(70, 562);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(80, 17);
+			this->label25->TabIndex = 40;
+			this->label25->Text = L"Postleitzahl";
+			// 
+			// comboBox12
+			// 
+			this->comboBox12->FormattingEnabled = true;
+			this->comboBox12->Location = System::Drawing::Point(258, 514);
+			this->comboBox12->Name = L"comboBox12";
+			this->comboBox12->Size = System::Drawing::Size(121, 24);
+			this->comboBox12->TabIndex = 39;
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Location = System::Drawing::Point(255, 491);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(92, 17);
+			this->label26->TabIndex = 38;
+			this->label26->Text = L"Hausnummer";
+			// 
+			// comboBox13
+			// 
+			this->comboBox13->FormattingEnabled = true;
+			this->comboBox13->Location = System::Drawing::Point(71, 514);
+			this->comboBox13->Name = L"comboBox13";
+			this->comboBox13->Size = System::Drawing::Size(121, 24);
+			this->comboBox13->TabIndex = 37;
+			// 
+			// label27
+			// 
+			this->label27->AutoSize = true;
+			this->label27->Location = System::Drawing::Point(68, 491);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(51, 17);
+			this->label27->TabIndex = 36;
+			this->label27->Text = L"Straße";
+			this->label27->Click += gcnew System::EventHandler(this, &MainForm::label27_Click);
+			// 
+			// comboBox14
+			// 
+			this->comboBox14->DropDownStyle = System::Windows::Forms::ComboBoxStyle::Simple;
+			this->comboBox14->FormattingEnabled = true;
+			this->comboBox14->Location = System::Drawing::Point(71, 455);
+			this->comboBox14->Name = L"comboBox14";
+			this->comboBox14->Size = System::Drawing::Size(121, 24);
+			this->comboBox14->TabIndex = 35;
+			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Location = System::Drawing::Point(68, 431);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(45, 17);
+			this->label28->TabIndex = 34;
+			this->label28->Text = L"Name";
+			// 
+			// label23
+			// 
+			this->label23->AutoSize = true;
+			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label23->Location = System::Drawing::Point(67, 393);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(207, 20);
+			this->label23->TabIndex = 33;
+			this->label23->Text = L"Herstellerinformationen";
+			// 
+			// comboBox8
+			// 
+			this->comboBox8->FormattingEnabled = true;
+			this->comboBox8->Location = System::Drawing::Point(258, 326);
+			this->comboBox8->Name = L"comboBox8";
+			this->comboBox8->Size = System::Drawing::Size(121, 24);
+			this->comboBox8->TabIndex = 32;
+			// 
+			// label22
+			// 
+			this->label22->AutoSize = true;
+			this->label22->Location = System::Drawing::Point(255, 303);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(92, 17);
+			this->label22->TabIndex = 31;
+			this->label22->Text = L"Sortierkasten";
+			// 
+			// label21
+			// 
+			this->label21->AutoSize = true;
+			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label21->Location = System::Drawing::Point(69, 52);
+			this->label21->Name = L"label21";
+			this->label21->Size = System::Drawing::Size(182, 20);
+			this->label21->TabIndex = 30;
+			this->label21->Text = L"Bauteilinformationen";
+			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label20->Location = System::Drawing::Point(69, 265);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(80, 20);
+			this->label20->TabIndex = 29;
+			this->label20->Text = L"Lagerort";
+			// 
+			// comboBox7
+			// 
+			this->comboBox7->FormattingEnabled = true;
+			this->comboBox7->Location = System::Drawing::Point(71, 326);
+			this->comboBox7->Name = L"comboBox7";
+			this->comboBox7->Size = System::Drawing::Size(121, 24);
+			this->comboBox7->TabIndex = 28;
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Location = System::Drawing::Point(68, 303);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(60, 17);
+			this->label19->TabIndex = 27;
+			this->label19->Text = L"Schrank";
+			// 
+			// comboBox6
+			// 
+			this->comboBox6->FormattingEnabled = true;
+			this->comboBox6->Location = System::Drawing::Point(258, 200);
+			this->comboBox6->Name = L"comboBox6";
+			this->comboBox6->Size = System::Drawing::Size(121, 24);
+			this->comboBox6->TabIndex = 26;
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(255, 177);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(51, 17);
+			this->label18->TabIndex = 25;
+			this->label18->Text = L"Anzahl";
+			// 
+			// comboBox5
+			// 
+			this->comboBox5->FormattingEnabled = true;
+			this->comboBox5->Location = System::Drawing::Point(71, 200);
+			this->comboBox5->Name = L"comboBox5";
+			this->comboBox5->Size = System::Drawing::Size(121, 24);
+			this->comboBox5->TabIndex = 24;
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(68, 177);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(60, 17);
+			this->label17->TabIndex = 23;
+			this->label17->Text = L"Zustand";
+			// 
+			// comboBox4
+			// 
+			this->comboBox4->FormattingEnabled = true;
+			this->comboBox4->Location = System::Drawing::Point(606, 118);
+			this->comboBox4->Name = L"comboBox4";
+			this->comboBox4->Size = System::Drawing::Size(121, 24);
+			this->comboBox4->TabIndex = 22;
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(603, 95);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(127, 17);
+			this->label16->TabIndex = 21;
+			this->label16->Text = L"Ergänzende Daten";
+			// 
+			// comboBox3
+			// 
+			this->comboBox3->FormattingEnabled = true;
+			this->comboBox3->Location = System::Drawing::Point(432, 118);
+			this->comboBox3->Name = L"comboBox3";
+			this->comboBox3->Size = System::Drawing::Size(121, 24);
+			this->comboBox3->TabIndex = 20;
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(429, 95);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(79, 17);
+			this->label15->TabIndex = 19;
+			this->label15->Text = L"ID-Nummer";
+			// 
 			// comboBox2
 			// 
 			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Location = System::Drawing::Point(231, 82);
+			this->comboBox2->Location = System::Drawing::Point(253, 118);
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(121, 24);
 			this->comboBox2->TabIndex = 18;
@@ -369,7 +707,7 @@ namespace informatik3projekt {
 			// label14
 			// 
 			this->label14->AutoSize = true;
-			this->label14->Location = System::Drawing::Point(228, 59);
+			this->label14->Location = System::Drawing::Point(250, 95);
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(129, 17);
 			this->label14->TabIndex = 17;
@@ -379,7 +717,7 @@ namespace informatik3projekt {
 			// 
 			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::Simple;
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(41, 82);
+			this->comboBox1->Location = System::Drawing::Point(71, 119);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(121, 24);
 			this->comboBox1->TabIndex = 16;
@@ -387,20 +725,11 @@ namespace informatik3projekt {
 			// Name
 			// 
 			this->Name->AutoSize = true;
-			this->Name->Location = System::Drawing::Point(38, 58);
+			this->Name->Location = System::Drawing::Point(68, 95);
 			this->Name->Name = L"Name";
 			this->Name->Size = System::Drawing::Size(136, 17);
 			this->Name->TabIndex = 15;
 			this->Name->Text = L"Bauteilbezeichnung:";
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(45, 754);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(46, 17);
-			this->label7->TabIndex = 14;
-			this->label7->Text = L"label7";
 			// 
 			// label5
 			// 
@@ -413,7 +742,7 @@ namespace informatik3projekt {
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(42, 712);
+			this->button6->Location = System::Drawing::Point(73, 769);
 			this->button6->Margin = System::Windows::Forms::Padding(4);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(100, 28);
@@ -459,10 +788,11 @@ namespace informatik3projekt {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(4, 0);
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F));
+			this->label4->Location = System::Drawing::Point(-3, -2);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(48, 17);
+			this->label4->Size = System::Drawing::Size(65, 24);
 			this->label4->TabIndex = 1;
 			this->label4->Text = L"Suche";
 			// 
@@ -552,6 +882,18 @@ namespace informatik3projekt {
 			this->pictureBox1->TabIndex = 11;
 			this->pictureBox1->TabStop = false;
 			// 
+			// button9
+			// 
+			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button9->Location = System::Drawing::Point(206, 769);
+			this->button9->Margin = System::Windows::Forms::Padding(4);
+			this->button9->Name = L"button9";
+			this->button9->Size = System::Drawing::Size(100, 28);
+			this->button9->TabIndex = 47;
+			this->button9->Text = L"Neu Eingeben";
+			this->button9->UseVisualStyleBackColor = true;
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -569,14 +911,15 @@ namespace informatik3projekt {
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->panel2);
-			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel4);
+			this->Controls->Add(this->panel2);
+			this->Controls->Add(this->panel3);
 			this->DoubleBuffered = true;
 			this->HelpButton = true;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Name = L"MainForm";
 			this->Text = L"Lagersystem";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
@@ -691,6 +1034,7 @@ namespace informatik3projekt {
 
 		}
 		
+
 };
 }
  
