@@ -4,7 +4,7 @@
 #include <msclr/marshal.h>
 #include <atlstr.h>
 
-//TEst test test
+//Marcel`s Form Bearbeitung
 
 Bauteil kartei;
 
