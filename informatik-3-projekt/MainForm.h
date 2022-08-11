@@ -1363,7 +1363,7 @@ private: System::Windows::Forms::Label^  label2;
 			this->HelpButton = true;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->Name = L"MainForm";
+//			this->Name = L"MainForm";
 			this->Text = L"Lagersystem";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
@@ -1440,14 +1440,6 @@ private: System::Windows::Forms::Label^  label2;
 	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
 		//Speichern Button in Eingabe Tab
 
-		speichern(comboBox1, kartei.bauteil_bez, kartei.array_length); //(location, Array, Index)
-		speichern(comboBox2, kartei.typ_bez, kartei.array_length);
-
-		comboBox_fill_list(comboBox2, kartei.typ_bez, kartei.array_length); //(location, Array, Arraylength)
-
-		output_char_on_label(label7, kartei.bauteil_bez[kartei.array_length]);//(location, text)
-
-		kartei.array_length++;
 
 		if (this->comboBox2->SelectedIndex == -1){}
 {
@@ -1485,6 +1477,7 @@ private: System::Windows::Forms::Label^  label2;
 		}
 
 	
+
 		
 
 
