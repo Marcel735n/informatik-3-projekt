@@ -146,9 +146,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\datenbank.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
     </EmbeddedResource>

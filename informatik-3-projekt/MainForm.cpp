@@ -6,8 +6,7 @@ using namespace System::Windows::Forms;
 void main(array<String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	
+
 	informatik3projekt::MainForm form;
 	Application::Run(%form);
-
 }

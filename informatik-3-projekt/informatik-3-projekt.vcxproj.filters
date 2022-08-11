@@ -37,13 +37,5 @@
     <EmbeddedResource Include="MainForm.resx">
       <Filter>Ressourcendateien</Filter>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyForm.resx">
-      <Filter>Ressourcendateien</Filter>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\datenbank.txt">
-      <Filter>Ressourcendateien</Filter>
-    </Text>
   </ItemGroup>
 </Project>
