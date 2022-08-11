@@ -138,15 +138,10 @@
     <ClCompile Include="MainForm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\Bauteil_lib.h" />
-    <ClInclude Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\Funktionen.h" />
     <ClInclude Include="Bauteil_Lib.h" />
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\..\..\..\OneDrive\Desktop\Semesteraufgabe_Laurin\Semesteraufgabe\datenbank.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
