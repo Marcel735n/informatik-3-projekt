@@ -113,15 +113,15 @@ namespace informatik3projekt {
 	private: System::Windows::Forms::ComboBox^  comboBox14;
 	private: System::Windows::Forms::Label^  label28;
 	private: System::Windows::Forms::Label^  label23;
-	private: System::Windows::Forms::ComboBox^  comboBox8;
-	private: System::Windows::Forms::Label^  label22;
+
+
 	private: System::Windows::Forms::Label^  label21;
-	private: System::Windows::Forms::Label^  label20;
+
 	private: System::Windows::Forms::ComboBox^  comboBox7;
 	private: System::Windows::Forms::Label^  label19;
 	private: System::Windows::Forms::ComboBox^  comboBox6;
 	private: System::Windows::Forms::Label^  label18;
-	private: System::Windows::Forms::ComboBox^  comboBox5;
+
 	private: System::Windows::Forms::Label^  label17;
 	private: System::Windows::Forms::ComboBox^  comboBox4;
 	private: System::Windows::Forms::Label^  label16;
@@ -190,6 +190,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column7;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column8;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column9;
 private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
+private: System::Windows::Forms::RadioButton^  radioButton2;
+private: System::Windows::Forms::RadioButton^  radioButton1;
+private: System::Windows::Forms::Label^  label2;
 
 
 
@@ -282,6 +285,9 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->comboBox28 = (gcnew System::Windows::Forms::ComboBox());
 			this->label38 = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->label29 = (gcnew System::Windows::Forms::Label());
 			this->comboBox9 = (gcnew System::Windows::Forms::ComboBox());
@@ -297,15 +303,11 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->comboBox14 = (gcnew System::Windows::Forms::ComboBox());
 			this->label28 = (gcnew System::Windows::Forms::Label());
 			this->label23 = (gcnew System::Windows::Forms::Label());
-			this->comboBox8 = (gcnew System::Windows::Forms::ComboBox());
-			this->label22 = (gcnew System::Windows::Forms::Label());
 			this->label21 = (gcnew System::Windows::Forms::Label());
-			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->comboBox7 = (gcnew System::Windows::Forms::ComboBox());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->comboBox6 = (gcnew System::Windows::Forms::ComboBox());
 			this->label18 = (gcnew System::Windows::Forms::Label());
-			this->comboBox5 = (gcnew System::Windows::Forms::ComboBox());
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
 			this->label16 = (gcnew System::Windows::Forms::Label());
@@ -435,23 +437,31 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			// dataGridView1
 			// 
 			this->dataGridView1->AllowUserToOrderColumns = true;
+			this->dataGridView1->AllowUserToResizeRows = false;
 			this->dataGridView1->BackgroundColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->dataGridView1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(10) {
 				this->Column1,
 					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8, this->Column9, this->Column10
 			});
+			this->dataGridView1->Cursor = System::Windows::Forms::Cursors::Default;
 			this->dataGridView1->Location = System::Drawing::Point(85, 416);
 			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->ReadOnly = true;
+			this->dataGridView1->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::DisableResizing;
 			this->dataGridView1->RowTemplate->Height = 24;
+			this->dataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
 			this->dataGridView1->Size = System::Drawing::Size(1203, 438);
 			this->dataGridView1->TabIndex = 77;
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MainForm::dataGridView1_CellContentClick);
 			// 
 			// Column1
 			// 
 			this->Column1->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::ColumnHeader;
 			this->Column1->HeaderText = L"ID";
 			this->Column1->Name = L"Column1";
+			this->Column1->ReadOnly = true;
 			this->Column1->Width = 51;
 			// 
 			// Column2
@@ -459,53 +469,62 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->Column2->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->Column2->HeaderText = L"Bezeichnung";
 			this->Column2->Name = L"Column2";
+			this->Column2->ReadOnly = true;
 			// 
 			// Column3
 			// 
 			this->Column3->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->Column3->HeaderText = L"Typ-Bez.";
 			this->Column3->Name = L"Column3";
+			this->Column3->ReadOnly = true;
 			// 
 			// Column4
 			// 
 			this->Column4->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->Column4->HeaderText = L"Ergänzungen";
 			this->Column4->Name = L"Column4";
+			this->Column4->ReadOnly = true;
 			// 
 			// Column5
 			// 
 			this->Column5->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->Column5->HeaderText = L"Schrank";
 			this->Column5->Name = L"Column5";
+			this->Column5->ReadOnly = true;
 			// 
 			// Column6
 			// 
 			this->Column6->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->Column6->HeaderText = L"Sortierkasten";
 			this->Column6->Name = L"Column6";
+			this->Column6->ReadOnly = true;
 			// 
 			// Column7
 			// 
 			this->Column7->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->Column7->HeaderText = L"Zustand";
 			this->Column7->Name = L"Column7";
+			this->Column7->ReadOnly = true;
 			// 
 			// Column8
 			// 
 			this->Column8->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->Column8->HeaderText = L"Anzahl";
 			this->Column8->Name = L"Column8";
+			this->Column8->ReadOnly = true;
 			// 
 			// Column9
 			// 
 			this->Column9->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			this->Column9->HeaderText = L"Hersteller";
 			this->Column9->Name = L"Column9";
+			this->Column9->ReadOnly = true;
 			// 
 			// Column10
 			// 
 			this->Column10->HeaderText = L"Webside";
 			this->Column10->Name = L"Column10";
+			this->Column10->ReadOnly = true;
 			this->Column10->Resizable = System::Windows::Forms::DataGridViewTriState::True;
 			this->Column10->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::Automatic;
 			// 
@@ -814,6 +833,9 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			// 
 			this->panel2->AutoScroll = true;
 			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->panel2->Controls->Add(this->radioButton2);
+			this->panel2->Controls->Add(this->radioButton1);
+			this->panel2->Controls->Add(this->label2);
 			this->panel2->Controls->Add(this->button9);
 			this->panel2->Controls->Add(this->label29);
 			this->panel2->Controls->Add(this->comboBox9);
@@ -829,15 +851,11 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->panel2->Controls->Add(this->comboBox14);
 			this->panel2->Controls->Add(this->label28);
 			this->panel2->Controls->Add(this->label23);
-			this->panel2->Controls->Add(this->comboBox8);
-			this->panel2->Controls->Add(this->label22);
 			this->panel2->Controls->Add(this->label21);
-			this->panel2->Controls->Add(this->label20);
 			this->panel2->Controls->Add(this->comboBox7);
 			this->panel2->Controls->Add(this->label19);
 			this->panel2->Controls->Add(this->comboBox6);
 			this->panel2->Controls->Add(this->label18);
-			this->panel2->Controls->Add(this->comboBox5);
 			this->panel2->Controls->Add(this->label17);
 			this->panel2->Controls->Add(this->comboBox4);
 			this->panel2->Controls->Add(this->label16);
@@ -858,11 +876,46 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->panel2->TabIndex = 3;
 			this->panel2->Visible = false;
 			// 
+			// radioButton2
+			// 
+			this->radioButton2->AutoSize = true;
+			this->radioButton2->Location = System::Drawing::Point(71, 241);
+			this->radioButton2->Name = L"radioButton2";
+			this->radioButton2->Size = System::Drawing::Size(98, 22);
+			this->radioButton2->TabIndex = 50;
+			this->radioButton2->TabStop = true;
+			this->radioButton2->Text = L"Gebraucht";
+			this->radioButton2->UseVisualStyleBackColor = true;
+			// 
+			// radioButton1
+			// 
+			this->radioButton1->AutoSize = true;
+			this->radioButton1->Location = System::Drawing::Point(71, 212);
+			this->radioButton1->Name = L"radioButton1";
+			this->radioButton1->Size = System::Drawing::Size(56, 22);
+			this->radioButton1->TabIndex = 49;
+			this->radioButton1->TabStop = true;
+			this->radioButton1->Text = L"Neu";
+			this->radioButton1->UseVisualStyleBackColor = true;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::Red;
+			this->label2->Location = System::Drawing::Point(73, 607);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(388, 25);
+			this->label2->TabIndex = 48;
+			this->label2->Text = L"Bitte überprüfen sie die Pflichteingaben";
+			this->label2->Visible = false;
+			// 
 			// button9
 			// 
 			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button9->Location = System::Drawing::Point(206, 769);
+			this->button9->Location = System::Drawing::Point(209, 659);
 			this->button9->Margin = System::Windows::Forms::Padding(4);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(100, 28);
@@ -873,7 +926,7 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			// label29
 			// 
 			this->label29->AutoSize = true;
-			this->label29->Location = System::Drawing::Point(1017, 780);
+			this->label29->Location = System::Drawing::Point(3, 880);
 			this->label29->Name = L"label29";
 			this->label29->Size = System::Drawing::Size(104, 18);
 			this->label29->TabIndex = 46;
@@ -882,7 +935,7 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			// comboBox9
 			// 
 			this->comboBox9->FormattingEnabled = true;
-			this->comboBox9->Location = System::Drawing::Point(71, 668);
+			this->comboBox9->Location = System::Drawing::Point(73, 578);
 			this->comboBox9->Name = L"comboBox9";
 			this->comboBox9->Size = System::Drawing::Size(121, 26);
 			this->comboBox9->TabIndex = 45;
@@ -892,7 +945,7 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(68, 645);
+			this->label7->Location = System::Drawing::Point(70, 555);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(101, 20);
 			this->label7->TabIndex = 44;
@@ -901,7 +954,7 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			// comboBox10
 			// 
 			this->comboBox10->FormattingEnabled = true;
-			this->comboBox10->Location = System::Drawing::Point(258, 585);
+			this->comboBox10->Location = System::Drawing::Point(260, 495);
 			this->comboBox10->Name = L"comboBox10";
 			this->comboBox10->Size = System::Drawing::Size(121, 26);
 			this->comboBox10->TabIndex = 43;
@@ -911,7 +964,7 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->label24->AutoSize = true;
 			this->label24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label24->Location = System::Drawing::Point(255, 562);
+			this->label24->Location = System::Drawing::Point(257, 472);
 			this->label24->Name = L"label24";
 			this->label24->Size = System::Drawing::Size(33, 20);
 			this->label24->TabIndex = 42;
@@ -920,7 +973,7 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			// comboBox11
 			// 
 			this->comboBox11->FormattingEnabled = true;
-			this->comboBox11->Location = System::Drawing::Point(73, 585);
+			this->comboBox11->Location = System::Drawing::Point(75, 495);
 			this->comboBox11->Name = L"comboBox11";
 			this->comboBox11->Size = System::Drawing::Size(121, 26);
 			this->comboBox11->TabIndex = 41;
@@ -930,7 +983,7 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->label25->AutoSize = true;
 			this->label25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label25->Location = System::Drawing::Point(70, 562);
+			this->label25->Location = System::Drawing::Point(72, 472);
 			this->label25->Name = L"label25";
 			this->label25->Size = System::Drawing::Size(96, 20);
 			this->label25->TabIndex = 40;
@@ -939,7 +992,7 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			// comboBox12
 			// 
 			this->comboBox12->FormattingEnabled = true;
-			this->comboBox12->Location = System::Drawing::Point(258, 514);
+			this->comboBox12->Location = System::Drawing::Point(260, 424);
 			this->comboBox12->Name = L"comboBox12";
 			this->comboBox12->Size = System::Drawing::Size(121, 26);
 			this->comboBox12->TabIndex = 39;
@@ -949,7 +1002,7 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->label26->AutoSize = true;
 			this->label26->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label26->Location = System::Drawing::Point(255, 491);
+			this->label26->Location = System::Drawing::Point(257, 401);
 			this->label26->Name = L"label26";
 			this->label26->Size = System::Drawing::Size(110, 20);
 			this->label26->TabIndex = 38;
@@ -958,7 +1011,7 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			// comboBox13
 			// 
 			this->comboBox13->FormattingEnabled = true;
-			this->comboBox13->Location = System::Drawing::Point(71, 514);
+			this->comboBox13->Location = System::Drawing::Point(73, 424);
 			this->comboBox13->Name = L"comboBox13";
 			this->comboBox13->Size = System::Drawing::Size(121, 26);
 			this->comboBox13->TabIndex = 37;
@@ -968,7 +1021,7 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->label27->AutoSize = true;
 			this->label27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label27->Location = System::Drawing::Point(68, 491);
+			this->label27->Location = System::Drawing::Point(70, 401);
 			this->label27->Name = L"label27";
 			this->label27->Size = System::Drawing::Size(59, 20);
 			this->label27->TabIndex = 36;
@@ -976,11 +1029,10 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			// 
 			// comboBox14
 			// 
-			this->comboBox14->DropDownStyle = System::Windows::Forms::ComboBoxStyle::Simple;
 			this->comboBox14->FormattingEnabled = true;
-			this->comboBox14->Location = System::Drawing::Point(71, 455);
+			this->comboBox14->Location = System::Drawing::Point(73, 365);
 			this->comboBox14->Name = L"comboBox14";
-			this->comboBox14->Size = System::Drawing::Size(121, 24);
+			this->comboBox14->Size = System::Drawing::Size(121, 26);
 			this->comboBox14->TabIndex = 35;
 			// 
 			// label28
@@ -988,7 +1040,7 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->label28->AutoSize = true;
 			this->label28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label28->Location = System::Drawing::Point(68, 431);
+			this->label28->Location = System::Drawing::Point(70, 341);
 			this->label28->Name = L"label28";
 			this->label28->Size = System::Drawing::Size(53, 20);
 			this->label28->TabIndex = 34;
@@ -999,30 +1051,11 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->label23->AutoSize = true;
 			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label23->Location = System::Drawing::Point(67, 393);
+			this->label23->Location = System::Drawing::Point(69, 303);
 			this->label23->Name = L"label23";
 			this->label23->Size = System::Drawing::Size(207, 20);
 			this->label23->TabIndex = 33;
 			this->label23->Text = L"Herstellerinformationen";
-			// 
-			// comboBox8
-			// 
-			this->comboBox8->FormattingEnabled = true;
-			this->comboBox8->Location = System::Drawing::Point(258, 326);
-			this->comboBox8->Name = L"comboBox8";
-			this->comboBox8->Size = System::Drawing::Size(121, 26);
-			this->comboBox8->TabIndex = 32;
-			// 
-			// label22
-			// 
-			this->label22->AutoSize = true;
-			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label22->Location = System::Drawing::Point(255, 303);
-			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(108, 20);
-			this->label22->TabIndex = 31;
-			this->label22->Text = L"Sortierkasten";
 			// 
 			// label21
 			// 
@@ -1035,21 +1068,10 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->label21->TabIndex = 30;
 			this->label21->Text = L"Bauteilinformationen";
 			// 
-			// label20
-			// 
-			this->label20->AutoSize = true;
-			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label20->Location = System::Drawing::Point(69, 265);
-			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(80, 20);
-			this->label20->TabIndex = 29;
-			this->label20->Text = L"Lagerort";
-			// 
 			// comboBox7
 			// 
 			this->comboBox7->FormattingEnabled = true;
-			this->comboBox7->Location = System::Drawing::Point(71, 326);
+			this->comboBox7->Location = System::Drawing::Point(431, 200);
 			this->comboBox7->Name = L"comboBox7";
 			this->comboBox7->Size = System::Drawing::Size(121, 26);
 			this->comboBox7->TabIndex = 28;
@@ -1059,11 +1081,11 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->label19->AutoSize = true;
 			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label19->Location = System::Drawing::Point(68, 303);
+			this->label19->Location = System::Drawing::Point(428, 177);
 			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(70, 20);
+			this->label19->Size = System::Drawing::Size(72, 20);
 			this->label19->TabIndex = 27;
-			this->label19->Text = L"Schrank";
+			this->label19->Text = L"Lagerort";
 			// 
 			// comboBox6
 			// 
@@ -1083,14 +1105,6 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->label18->Size = System::Drawing::Size(60, 20);
 			this->label18->TabIndex = 25;
 			this->label18->Text = L"Anzahl";
-			// 
-			// comboBox5
-			// 
-			this->comboBox5->FormattingEnabled = true;
-			this->comboBox5->Location = System::Drawing::Point(71, 200);
-			this->comboBox5->Name = L"comboBox5";
-			this->comboBox5->Size = System::Drawing::Size(121, 26);
-			this->comboBox5->TabIndex = 24;
 			// 
 			// label17
 			// 
@@ -1137,9 +1151,9 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 				static_cast<System::Byte>(0)));
 			this->label15->Location = System::Drawing::Point(429, 95);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(96, 20);
+			this->label15->Size = System::Drawing::Size(102, 20);
 			this->label15->TabIndex = 19;
-			this->label15->Text = L"ID-Nummer";
+			this->label15->Text = L"ID-Nummer*";
 			// 
 			// comboBox2
 			// 
@@ -1156,18 +1170,17 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 				static_cast<System::Byte>(0)));
 			this->label14->Location = System::Drawing::Point(250, 95);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(148, 20);
+			this->label14->Size = System::Drawing::Size(154, 20);
 			this->label14->TabIndex = 17;
-			this->label14->Text = L"Typenbezeichnung";
+			this->label14->Text = L"Typenbezeichnung*";
 			// 
 			// comboBox1
 			// 
 			this->comboBox1->AllowDrop = true;
-			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::Simple;
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Location = System::Drawing::Point(71, 119);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 24);
+			this->comboBox1->Size = System::Drawing::Size(121, 26);
 			this->comboBox1->TabIndex = 16;
 			// 
 			// Name
@@ -1177,9 +1190,9 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 				static_cast<System::Byte>(0)));
 			this->Name->Location = System::Drawing::Point(68, 95);
 			this->Name->Name = L"Name";
-			this->Name->Size = System::Drawing::Size(160, 20);
+			this->Name->Size = System::Drawing::Size(161, 20);
 			this->Name->TabIndex = 15;
-			this->Name->Text = L"Bauteilbezeichnung:";
+			this->Name->Text = L"Bauteilbezeichnung*";
 			// 
 			// label5
 			// 
@@ -1194,7 +1207,7 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			// 
 			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button6->Location = System::Drawing::Point(73, 769);
+			this->button6->Location = System::Drawing::Point(76, 659);
 			this->button6->Margin = System::Windows::Forms::Padding(4);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(100, 28);
@@ -1340,10 +1353,10 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel4);
+			this->Controls->Add(this->panel1);
 			this->DoubleBuffered = true;
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -1391,9 +1404,10 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 		panel3->Enabled = false;
 		panel4->Visible = false;
 		panel4->Enabled = false;
+		
 		this->dataGridView1->Rows->Add("1", "123TCS","Kondensator","120 yF","3","1","NEU","100","Texas-Instrumen","www.hs21.de" );
-
-
+		this->dataGridView1->Rows->Add("3", "123TCS", "Kondensator", "120 yF", "3", "3", "NEU", "100", "Texas-Instrumen", "www.hs211.de");
+		this->dataGridView1->Rows->Add("5", "123TCS", "Wiederstand", "120 yF", "3", "1", "NEU", "100", "Texas-Instrumen", "www.hs231.de");
 	}
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 		//Suche
@@ -1434,6 +1448,11 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 		output_char_on_label(label7, kartei.bauteil_bez[kartei.array_length]);//(location, text)
 
 		kartei.array_length++;
+
+		if (this->comboBox2->SelectedIndex == -1){}
+{
+			this->label2->Visible = true;
+		}
 	}
 		void output_char_on_label(Label^ temp_label, char temp_text[STRING_LENGTH]) {
 			String^ temp_str = gcnew String{temp_text};
@@ -1464,12 +1483,18 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
 			}
 
 		}
+
+	
 		
 
 
 
 
 
+private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+		//Durch Klickevent ausfüllen der Ausgabe
+	;
+}
 };
 }
  
