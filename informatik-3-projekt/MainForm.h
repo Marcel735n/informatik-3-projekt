@@ -577,6 +577,7 @@ namespace informatik3projekt {
 			this->HelpButton = true;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Name = L"MainForm";
 			this->Text = L"Lagersystem";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
