@@ -6,8 +6,10 @@
 
 //Marcels zweite Änderung
 
-Bauteil kartei;
+Bauteil kartei[MAX_SIZE];
+Bauteil such_kartei[MAX_SIZE];
 
+int anzahl = 0;
 
 namespace informatik3projekt {
 
@@ -180,19 +182,28 @@ private: System::Windows::Forms::DataGridView^  dataGridView1;
 
 private: System::Windows::Forms::Button^  button12;
 private: System::Windows::Forms::Button^  button11;
+
+
+
+
+
+
+
+
+
+
+private: System::Windows::Forms::RadioButton^  radioButton2;
+private: System::Windows::Forms::RadioButton^  radioButton1;
+private: System::Windows::Forms::Label^  label2;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column1;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column2;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column3;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column4;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column5;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column6;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column7;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column8;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column9;
 private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
-private: System::Windows::Forms::RadioButton^  radioButton2;
-private: System::Windows::Forms::RadioButton^  radioButton1;
-private: System::Windows::Forms::Label^  label2;
 
 
 
@@ -248,7 +259,6 @@ private: System::Windows::Forms::Label^  label2;
 			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -436,14 +446,15 @@ private: System::Windows::Forms::Label^  label2;
 			// 
 			// dataGridView1
 			// 
+			this->dataGridView1->AllowDrop = true;
 			this->dataGridView1->AllowUserToOrderColumns = true;
 			this->dataGridView1->AllowUserToResizeRows = false;
 			this->dataGridView1->BackgroundColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->dataGridView1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(10) {
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(9) {
 				this->Column1,
-					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8, this->Column9, this->Column10
+					this->Column2, this->Column3, this->Column4, this->Column5, this->Column7, this->Column8, this->Column9, this->Column10
 			});
 			this->dataGridView1->Cursor = System::Windows::Forms::Cursors::Default;
 			this->dataGridView1->Location = System::Drawing::Point(85, 416);
@@ -454,6 +465,7 @@ private: System::Windows::Forms::Label^  label2;
 			this->dataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
 			this->dataGridView1->Size = System::Drawing::Size(1203, 438);
 			this->dataGridView1->TabIndex = 77;
+			this->dataGridView1->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MainForm::dataGridView1_CellClick);
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MainForm::dataGridView1_CellContentClick);
 			// 
 			// Column1
@@ -488,16 +500,9 @@ private: System::Windows::Forms::Label^  label2;
 			// Column5
 			// 
 			this->Column5->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->Column5->HeaderText = L"Schrank";
+			this->Column5->HeaderText = L"Lagerort";
 			this->Column5->Name = L"Column5";
 			this->Column5->ReadOnly = true;
-			// 
-			// Column6
-			// 
-			this->Column6->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->Column6->HeaderText = L"Sortierkasten";
-			this->Column6->Name = L"Column6";
-			this->Column6->ReadOnly = true;
 			// 
 			// Column7
 			// 
@@ -922,6 +927,7 @@ private: System::Windows::Forms::Label^  label2;
 			this->button9->TabIndex = 47;
 			this->button9->Text = L"Neu";
 			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &MainForm::button9_Click);
 			// 
 			// label29
 			// 
@@ -1232,7 +1238,6 @@ private: System::Windows::Forms::Label^  label2;
 			// 
 			this->panel4->AutoScroll = true;
 			this->panel4->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
-			this->panel4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel4.BackgroundImage")));
 			this->panel4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->panel4->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->panel4->ForeColor = System::Drawing::SystemColors::ControlText;
@@ -1353,17 +1358,16 @@ private: System::Windows::Forms::Label^  label2;
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
+			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel4);
-			this->Controls->Add(this->panel1);
 			this->DoubleBuffered = true;
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->HelpButton = true;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-//			this->Name = L"MainForm";
 			this->Text = L"Lagersystem";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
@@ -1404,10 +1408,13 @@ private: System::Windows::Forms::Label^  label2;
 		panel3->Enabled = false;
 		panel4->Visible = false;
 		panel4->Enabled = false;
-		
+
+		einlesen(kartei, &anzahl);
+		ausgabe(kartei, anzahl);
+		/*
 		this->dataGridView1->Rows->Add("1", "123TCS","Kondensator","120 yF","3","1","NEU","100","Texas-Instrumen","www.hs21.de" );
 		this->dataGridView1->Rows->Add("3", "123TCS", "Kondensator", "120 yF", "3", "3", "NEU", "100", "Texas-Instrumen", "www.hs211.de");
-		this->dataGridView1->Rows->Add("5", "123TCS", "Wiederstand", "120 yF", "3", "1", "NEU", "100", "Texas-Instrumen", "www.hs231.de");
+		this->dataGridView1->Rows->Add("5", "123TCS", "Wiederstand", "120 yF", "3", "1", "NEU", "100", "Texas-Instrumen", "www.hs231.de");*/
 	}
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 		//Suche
@@ -1437,56 +1444,253 @@ private: System::Windows::Forms::Label^  label2;
 		//Beenden
 		Close();
 	}
+
+
 	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
 		//Speichern Button in Eingabe Tab
 
+		eingabe(kartei, &anzahl);
+		speichern(kartei, anzahl);
 
-		if (this->comboBox2->SelectedIndex == -1){}
-{
-			this->label2->Visible = true;
-		}
 	}
-		void output_char_on_label(Label^ temp_label, char temp_text[STRING_LENGTH]) {
-			String^ temp_str = gcnew String{temp_text};
-			temp_label->Text = temp_str;
-		}
-
-		void speichern(ComboBox^ temp_Box, char temp_text[][STRING_LENGTH], int temp_array_length) {
-			//----Abrufen einer Eingabe und schreiben in das entsprechende Array----
-			//----------------------------------------------------------------------
-			//ComboBox^ temp_Box --> zu füllende ComboBox
-			//char temp_text[][STRING_LENGTH] --> Inhalt
-			//int temp_array_length --> Anzahl der Items
-
-			strcpy(temp_text[temp_array_length], CStringA(temp_Box->Text));
-		}
-
-		void comboBox_fill_list(ComboBox^ temp_Box, char temp_text[][STRING_LENGTH], int temp_array_length) { 
-			//----Füllen von ComboBox-DropDown-Listen----
-			//-------------------------------------------
-			//ComboBox^ temp_Box --> zu füllende ComboBox
-			//char temp_text[][STRING_LENGTH] --> Inhalt
-			//int temp_array_length --> Anzahl der Items
-
-			temp_Box->Items->Clear();
-			for (int i = 0; i <= temp_array_length; i++) {
-				String^ temp_str = gcnew String{ temp_text[i] };
-				temp_Box->Items->Add(temp_str);
-			}
-
-		}
-
-	
-
-		
-
-
-
-
-
-private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+	private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
 		//Durch Klickevent ausfüllen der Ausgabe
-	;
+
+	}
+	private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e) {
+		//Neu Button bei Eingabe-Tab
+
+		//!!!TODO : evtl speicherung abfragen bevor felder geleert werden?
+
+		//Leeren aller Eingabeelemente
+		comboBox1->Text = "";
+		comboBox2->Text = "";
+		comboBox3->Text = "";
+		comboBox4->Text = "";
+		comboBox6->Text = "";
+		comboBox7->Text = "";
+		comboBox9->Text = "";
+		comboBox10->Text = "";
+		comboBox11->Text = "";
+		comboBox12->Text = "";
+		comboBox13->Text = "";
+		comboBox14->Text = "";
+		radioButton1->Checked = false;
+		radioButton2->Checked = false;
+	}
+
+
+//---------------------------------FUNKTIONEN---------------------------------FUNKTIONEN---------------------------------FUNKTIONEN---------------------------------FUNKTIONEN---------------------------------
+		 void eingabe(Bauteil kartei[MAX_SIZE], int *index) {
+			 //----Abrufen einer Eingabe (char) und schreiben in das entsprechende Array----
+			 //----------------------------------------------------------------------
+			 //ComboBox^ temp_Box --> zu füllende ComboBox
+			 //char temp_text[][STRING_LENGTH] --> Inhalt
+			 //int temp_array_length --> Anzahl der Items
+
+			 Bauteil temp;
+
+			 //kopieren von COmboBox Inhalten in temporäres Bauteil-Array
+			 strcpy(temp.bauteil_bez, CStringA(comboBox1->Text));
+			 strcpy(temp.typ_bez, CStringA(comboBox2->Text));
+			 temp.id_nummer = System::Convert::ToInt32(CStringA(comboBox3->Text));
+			 strcpy(temp.erg_daten, CStringA(comboBox4->Text));
+			 
+			 //if( Tick bei einem oder anderem... --> Neu/gebraucht 
+			 if (radioButton1->Checked) {
+				 temp.neu_gebraucht = 'n';
+			 }
+			 else if (radioButton2->Checked) {
+				 temp.neu_gebraucht = 'g';
+			 }
+			 temp.anzahl = System::Convert::ToInt32(CStringA(comboBox6->Text));
+
+			 strcpy(temp.lagerort, CStringA(comboBox7->Text));
+			 strcpy(temp.hersteller.name, CStringA(comboBox14->Text));
+			 strcpy(temp.hersteller.strasse, CStringA(comboBox13->Text));
+			 temp.hersteller.haus_nr = System::Convert::ToInt32(CStringA(comboBox12->Text));
+			 temp.hersteller.plz = System::Convert::ToInt32(CStringA(comboBox11->Text));
+			 strcpy(temp.hersteller.ort, CStringA(comboBox10->Text));
+			 strcpy(temp.hersteller.internetseite, CStringA(comboBox9->Text));
+
+
+			 //Abfrage nach 
+			 if (temp.bauteil_bez[0] == '\0' || temp.typ_bez[0] == '\0' || temp.id_nummer == 0) {
+				 //!!!Hier Label einfügen mit Fehlermeldung "Pflichtfelder prüfen"
+				 this->label2->Visible = true;
+			 }
+			 else {
+				 this->label2->Visible = false;
+				 comboBox1->Text->IsNullOrWhiteSpace;
+				 kartei[*index] = temp;
+				 /*strcpy(kartei[*index].bauteil_bez, temp.bauteil_bez);
+				 strcpy(kartei[*index].typ_bez, temp.typ_bez);
+				 kartei[*index].id_nummer = temp.id_nummer;
+				 strcpy(kartei[*index].erg_daten, temp.erg_daten);
+				 kartei[*index].anzahl = temp.anzahl;
+				 kartei[*index].neu_gebraucht = temp.neu_gebraucht;
+
+				 strcpy(kartei[*index].lagerort, temp.lagerort);
+
+				 strcpy(kartei[*index].hersteller.name, temp.hersteller.name);
+				 strcpy(kartei[*index].hersteller.strasse, temp.hersteller.strasse);
+				 kartei[*index].hersteller.haus_nr = temp.hersteller.haus_nr;
+				 kartei[*index].hersteller.plz = temp.hersteller.plz;
+				 strcpy(kartei[*index].hersteller.ort, temp.hersteller.ort);
+				 strcpy(kartei[*index].hersteller.internetseite, temp.hersteller.internetseite);
+ */
+
+				 (*index)++;
+			 }
+		 }
+
+		 void output_char_on_label(Label^ temp_label, char temp_text[STRING_LENGTH]) {
+			 String^ temp_str = gcnew String{ temp_text };
+			 temp_label->Text = temp_str;
+		 }
+
+		 void comboBox_fill_list(ComboBox^ temp_Box, Bauteil *such_kartei, int ergebnis_anzahl) {
+			 //----Füllen von ListBox-Listen----
+			 //---------------------------------
+			 //ListBox^ temp_List --> zu füllende ListBox
+			 //char temp_text[][STRING_LENGTH] --> Inhalt
+			 //int temp_array_length --> Anzahl der Items
+
+			 temp_Box->Items->Clear();
+
+			 for (int i = 0; i < ergebnis_anzahl; i++) {
+				 String^ temp_str = gcnew String{ such_kartei[i].bauteil_bez };
+				 temp_Box->Items->Add(temp_str);
+			 }
+		 }
+
+		 void comboBox_fill_text(ComboBox^ temp_Box, char temp_text[STRING_LENGTH]) {
+			 String^ temp_str = gcnew String{ temp_text };
+			 temp_Box->Text = temp_str;
+		 }
+
+		 void comboBox_fill_text_int(ComboBox^ temp_Box, int temp_int) {
+			 temp_Box->Text = System::Convert::ToString(temp_int);
+			 
+		 }
+
+		 void autoFill_text(Bauteil such_kartei) {
+			 comboBox_fill_text(comboBox14, such_kartei.hersteller.name);
+			 comboBox_fill_text(comboBox10, such_kartei.hersteller.ort);
+			 comboBox_fill_text(comboBox13, such_kartei.hersteller.strasse);
+			 comboBox_fill_text(comboBox9, such_kartei.hersteller.internetseite);
+			 comboBox12->Text = System::Convert::ToString(such_kartei.hersteller.haus_nr);
+			 comboBox11->Text = System::Convert::ToString(such_kartei.hersteller.plz);
+		 }
+
+		 void listBox_fill_List(ListBox^ temp_List, Bauteil *such_kartei, int ergebnis_anzahl) {
+			 //----Füllen von ListBox-Listen----
+			 //---------------------------------
+			 //ListBox^ temp_List --> zu füllende ListBox
+			 //char temp_text[][STRING_LENGTH] --> Inhalt
+			 //int temp_array_length --> Anzahl der Items
+
+
+			 temp_List->Items->Clear();
+
+			 for (int i = 0; i < ergebnis_anzahl; i++) {
+				 String^ temp_str = gcnew String{ such_kartei[i].bauteil_bez };
+				 temp_List->Items->Add(temp_str);
+			 }
+		 }
+
+		 void speichern(Bauteil kartei[MAX_SIZE], int index) {
+			 FILE* datei;
+
+			 datei = fopen("datenbank.txt", "wb");
+			 if (datei == NULL) {
+				 printf("Kann Datei nicht \224ffnen!\n");
+			 }
+			 else {
+				 fwrite(&index, sizeof(int), 1, datei);
+				 fwrite(kartei, index * sizeof(*kartei), 1, datei);
+				 fclose(datei);
+				 printf("Datei wurde erfolgreich gespeichert\n\n");
+			 }
+		 }
+
+		 /*
+		 Die einlese-Funktion ließt die gesamte Kartei aus
+		 Die Anzahl der Einträge wird als erstes ausgelesen
+		 */
+		 void einlesen(Bauteil kartei[MAX_SIZE], int *anzahl) {
+			 FILE *datei;
+
+			 datei = fopen("datenbank.txt", "rb");
+			 if (datei == NULL) {
+				 printf("Kann Datei nicht \224ffnen!\n");
+			 }
+			 else {
+				 fread(anzahl, sizeof(int), 1, datei);
+				 while (!feof(datei)) {
+					 fread(kartei, sizeof(*kartei), *anzahl, datei);
+				 }
+				 fclose(datei);
+			 }
+			 if (*anzahl == 0) {
+				 printf("Keine Datens\204tze vorhanden");
+			 }
+		 }
+
+		 void ausgabe(Bauteil kartei[MAX_SIZE], int index) {
+			 dataGridView1->Rows->Clear();
+
+			 for (int i = 0; i < index; i++) {
+				 
+				 String^ temp_baut_bez = gcnew String{ kartei[i].bauteil_bez };
+				 String^ temp_typ_bez = gcnew String{ kartei[i].typ_bez };
+				 String^ temp_erg_daten = gcnew String{ kartei[i].erg_daten };
+				 String^ temp_lagerort = gcnew String{ kartei[i].lagerort };
+				 String^ temp_hersteller_name = gcnew String{ kartei[i].hersteller.name };
+				 String^ temp_hersteller_internetseite = gcnew String{ kartei[i].hersteller.internetseite };
+
+				 String^ temp_neu_geb;
+				 if (kartei[index].neu_gebraucht == 'n') {
+					 temp_neu_geb = "neu";
+				 }
+				 else {
+					 temp_neu_geb = "gebraucht";
+				 }
+				 dataGridView1->Rows->Add(System::Convert::ToString(kartei[index].id_nummer), temp_baut_bez, temp_typ_bez, temp_erg_daten, temp_lagerort, temp_neu_geb, System::Convert::ToString(kartei[index].anzahl), temp_hersteller_name, temp_hersteller_internetseite);
+			 }
+			 //dataGridView1->Rows->Add("1", "123TCS", "Kondensator", "120 yF", "3", "1", "NEU", "100", "Texas-Instrumen", "www.hs21.de");
+		}
+
+		 void ausgabe_eintragen(Bauteil kartei[MAX_SIZE], int index) {
+			 
+			 comboBox_fill_text(comboBox28, kartei[index].bauteil_bez);
+			 comboBox_fill_text(comboBox27, kartei[index].typ_bez);
+			 comboBox_fill_text_int(comboBox26, kartei[index].id_nummer);
+			 comboBox_fill_text(comboBox25, kartei[index].erg_daten);
+			
+			 char temp_neu_geb[STRING_LENGTH];
+			 if (kartei[index].neu_gebraucht = true) {
+				 strcpy(temp_neu_geb, "neu");
+			 }
+			 else {
+				 strcpy(temp_neu_geb, "gebraucht");
+			 }
+			 comboBox_fill_text(comboBox24, temp_neu_geb);
+			 comboBox_fill_text_int(comboBox23, kartei[index].anzahl);
+			 comboBox_fill_text(comboBox22, kartei[index].lagerort);
+
+			 comboBox_fill_text(comboBox20, kartei[index].hersteller.name);
+			 comboBox_fill_text(comboBox19, kartei[index].hersteller.strasse);
+			 comboBox_fill_text_int(comboBox18, kartei[index].hersteller.haus_nr);
+			 comboBox_fill_text_int(comboBox18, kartei[index].hersteller.plz);
+			 comboBox_fill_text(comboBox16, kartei[index].hersteller.ort);
+			 comboBox_fill_text(comboBox15, kartei[index].hersteller.internetseite);
+
+		 }
+
+private: System::Void dataGridView1_CellClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+		ausgabe_eintragen(kartei, dataGridView1->CurrentCell->RowIndex);
+		
 }
 };
 }
