@@ -11,6 +11,7 @@ Bauteil such_kartei[MAX_SIZE];
 
 int anzahl = 0;
 
+
 namespace informatik3projekt {
 
 	using namespace System;
@@ -57,7 +58,7 @@ namespace informatik3projekt {
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Panel^  panel3;
 	private: System::Windows::Forms::Button^  button3;
-	private: System::Windows::Forms::Button^  button4;
+
 	private: System::Windows::Forms::Button^  button5;
 
 
@@ -160,7 +161,7 @@ private: System::Windows::Forms::ComboBox^  comboBox22;
 private: System::Windows::Forms::Label^  label32;
 private: System::Windows::Forms::ComboBox^  comboBox23;
 private: System::Windows::Forms::Label^  label33;
-private: System::Windows::Forms::ComboBox^  comboBox24;
+
 private: System::Windows::Forms::Label^  label34;
 private: System::Windows::Forms::ComboBox^  comboBox25;
 private: System::Windows::Forms::Label^  label35;
@@ -195,15 +196,15 @@ private: System::Windows::Forms::Button^  button11;
 private: System::Windows::Forms::RadioButton^  radioButton2;
 private: System::Windows::Forms::RadioButton^  radioButton1;
 private: System::Windows::Forms::Label^  label2;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column1;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column2;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column3;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column4;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column5;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column7;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column8;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column9;
-private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
+
+
+
+
+
+
+
+
+
 private: System::Windows::Forms::Button^  button13;
 private: System::Windows::Forms::DataGridView^  dataGridView2;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn1;
@@ -218,6 +219,23 @@ private: System::Windows::Forms::DataGridViewLinkColumn^  dataGridViewLinkColumn
 private: System::Windows::Forms::Button^  button10;
 private: System::Windows::Forms::ComboBox^  comboBox5;
 private: System::Windows::Forms::Label^  label13;
+private: System::Windows::Forms::ComboBox^  comboBox8;
+private: System::Windows::Forms::Label^  label20;
+private: System::Windows::Forms::Button^  button14;
+private: System::Windows::Forms::Label^  label22;
+private: System::Windows::Forms::Button^  button15;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column1;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column3;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column4;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column5;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column7;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column8;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column9;
+private: System::Windows::Forms::DataGridViewLinkColumn^  Column10;
+private: System::Windows::Forms::RadioButton^  radioButton4;
+private: System::Windows::Forms::RadioButton^  radioButton3;
+private: System::Windows::Forms::Label^  label39;
 
 
 
@@ -265,6 +283,10 @@ private: System::Windows::Forms::Label^  label13;
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->radioButton4 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
+			this->comboBox8 = (gcnew System::Windows::Forms::ComboBox());
+			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->button12 = (gcnew System::Windows::Forms::Button());
 			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
@@ -296,7 +318,6 @@ private: System::Windows::Forms::Label^  label13;
 			this->label32 = (gcnew System::Windows::Forms::Label());
 			this->comboBox23 = (gcnew System::Windows::Forms::ComboBox());
 			this->label33 = (gcnew System::Windows::Forms::Label());
-			this->comboBox24 = (gcnew System::Windows::Forms::ComboBox());
 			this->label34 = (gcnew System::Windows::Forms::Label());
 			this->comboBox25 = (gcnew System::Windows::Forms::ComboBox());
 			this->label35 = (gcnew System::Windows::Forms::Label());
@@ -343,8 +364,12 @@ private: System::Windows::Forms::Label^  label13;
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
+			this->button15 = (gcnew System::Windows::Forms::Button());
+			this->button14 = (gcnew System::Windows::Forms::Button());
+			this->label22 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->button13 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -359,7 +384,6 @@ private: System::Windows::Forms::Label^  label13;
 			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->comboBox5 = (gcnew System::Windows::Forms::ComboBox());
 			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
@@ -368,10 +392,11 @@ private: System::Windows::Forms::Label^  label13;
 			this->columnHeader2 = (gcnew System::Windows::Forms::ColumnHeader());
 			this->columnHeader3 = (gcnew System::Windows::Forms::ColumnHeader());
 			this->columnHeader4 = (gcnew System::Windows::Forms::ColumnHeader());
-			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label39 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->panel2->SuspendLayout();
+			this->panel4->SuspendLayout();
 			this->panel3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
@@ -379,6 +404,7 @@ private: System::Windows::Forms::Label^  label13;
 			// 
 			// button1
 			// 
+			this->button1->Enabled = false;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->Location = System::Drawing::Point(408, 56);
@@ -392,6 +418,7 @@ private: System::Windows::Forms::Label^  label13;
 			// 
 			// button2
 			// 
+			this->button2->Enabled = false;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button2->Location = System::Drawing::Point(686, 56);
@@ -407,6 +434,11 @@ private: System::Windows::Forms::Label^  label13;
 			// 
 			this->panel1->BackColor = System::Drawing::SystemColors::Control;
 			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->panel1->Controls->Add(this->label39);
+			this->panel1->Controls->Add(this->radioButton4);
+			this->panel1->Controls->Add(this->radioButton3);
+			this->panel1->Controls->Add(this->comboBox8);
+			this->panel1->Controls->Add(this->label20);
 			this->panel1->Controls->Add(this->button12);
 			this->panel1->Controls->Add(this->button11);
 			this->panel1->Controls->Add(this->dataGridView1);
@@ -429,7 +461,6 @@ private: System::Windows::Forms::Label^  label13;
 			this->panel1->Controls->Add(this->label32);
 			this->panel1->Controls->Add(this->comboBox23);
 			this->panel1->Controls->Add(this->label33);
-			this->panel1->Controls->Add(this->comboBox24);
 			this->panel1->Controls->Add(this->label34);
 			this->panel1->Controls->Add(this->comboBox25);
 			this->panel1->Controls->Add(this->label35);
@@ -447,11 +478,51 @@ private: System::Windows::Forms::Label^  label13;
 			this->panel1->TabIndex = 2;
 			this->panel1->Visible = false;
 			// 
+			// radioButton4
+			// 
+			this->radioButton4->AutoSize = true;
+			this->radioButton4->Location = System::Drawing::Point(84, 180);
+			this->radioButton4->Name = L"radioButton4";
+			this->radioButton4->Size = System::Drawing::Size(48, 19);
+			this->radioButton4->TabIndex = 84;
+			this->radioButton4->TabStop = true;
+			this->radioButton4->Text = L"Neu";
+			this->radioButton4->UseVisualStyleBackColor = true;
+			// 
+			// radioButton3
+			// 
+			this->radioButton3->AutoSize = true;
+			this->radioButton3->Location = System::Drawing::Point(84, 201);
+			this->radioButton3->Name = L"radioButton3";
+			this->radioButton3->Size = System::Drawing::Size(82, 19);
+			this->radioButton3->TabIndex = 83;
+			this->radioButton3->Text = L"Gebraucht";
+			this->radioButton3->UseVisualStyleBackColor = true;
+			// 
+			// comboBox8
+			// 
+			this->comboBox8->FormattingEnabled = true;
+			this->comboBox8->Location = System::Drawing::Point(1159, 75);
+			this->comboBox8->Name = L"comboBox8";
+			this->comboBox8->Size = System::Drawing::Size(121, 23);
+			this->comboBox8->TabIndex = 82;
+			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label20->Location = System::Drawing::Point(1156, 52);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(160, 17);
+			this->label20->TabIndex = 81;
+			this->label20->Text = L"Inhalt ausgewählte Zelle";
+			// 
 			// button12
 			// 
 			this->button12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button12->Location = System::Drawing::Point(1172, 212);
+			this->button12->Location = System::Drawing::Point(991, 323);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(116, 35);
 			this->button12->TabIndex = 80;
@@ -462,7 +533,7 @@ private: System::Windows::Forms::Label^  label13;
 			// 
 			this->button11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button11->Location = System::Drawing::Point(1172, 265);
+			this->button11->Location = System::Drawing::Point(1172, 323);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(116, 35);
 			this->button11->TabIndex = 79;
@@ -487,11 +558,10 @@ private: System::Windows::Forms::Label^  label13;
 			this->dataGridView1->ReadOnly = true;
 			this->dataGridView1->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::DisableResizing;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
+			this->dataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::CellSelect;
 			this->dataGridView1->Size = System::Drawing::Size(1203, 438);
 			this->dataGridView1->TabIndex = 77;
 			this->dataGridView1->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MainForm::dataGridView1_CellClick);
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MainForm::dataGridView1_CellContentClick);
 			// 
 			// Column1
 			// 
@@ -557,6 +627,7 @@ private: System::Windows::Forms::Label^  label13;
 			this->Column10->ReadOnly = true;
 			this->Column10->Resizable = System::Windows::Forms::DataGridViewTriState::True;
 			this->Column10->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::Automatic;
+			this->Column10->TrackVisitedState = false;
 			// 
 			// comboBox15
 			// 
@@ -743,14 +814,6 @@ private: System::Windows::Forms::Label^  label13;
 			this->label33->TabIndex = 56;
 			this->label33->Text = L"Anzahl";
 			// 
-			// comboBox24
-			// 
-			this->comboBox24->FormattingEnabled = true;
-			this->comboBox24->Location = System::Drawing::Point(85, 180);
-			this->comboBox24->Name = L"comboBox24";
-			this->comboBox24->Size = System::Drawing::Size(121, 23);
-			this->comboBox24->TabIndex = 55;
-			// 
 			// label34
 			// 
 			this->label34->AutoSize = true;
@@ -796,9 +859,9 @@ private: System::Windows::Forms::Label^  label13;
 				static_cast<System::Byte>(0)));
 			this->label36->Location = System::Drawing::Point(443, 75);
 			this->label36->Name = L"label36";
-			this->label36->Size = System::Drawing::Size(79, 17);
+			this->label36->Size = System::Drawing::Size(84, 17);
 			this->label36->TabIndex = 50;
-			this->label36->Text = L"ID-Nummer";
+			this->label36->Text = L"ID-Nummer*";
 			// 
 			// comboBox27
 			// 
@@ -815,9 +878,9 @@ private: System::Windows::Forms::Label^  label13;
 				static_cast<System::Byte>(0)));
 			this->label37->Location = System::Drawing::Point(264, 75);
 			this->label37->Name = L"label37";
-			this->label37->Size = System::Drawing::Size(129, 17);
+			this->label37->Size = System::Drawing::Size(134, 17);
 			this->label37->TabIndex = 48;
-			this->label37->Text = L"Typenbezeichnung";
+			this->label37->Text = L"Typenbezeichnung*";
 			// 
 			// comboBox28
 			// 
@@ -835,9 +898,9 @@ private: System::Windows::Forms::Label^  label13;
 				static_cast<System::Byte>(0)));
 			this->label38->Location = System::Drawing::Point(82, 75);
 			this->label38->Name = L"label38";
-			this->label38->Size = System::Drawing::Size(136, 17);
+			this->label38->Size = System::Drawing::Size(137, 17);
 			this->label38->TabIndex = 46;
-			this->label38->Text = L"Bauteilbezeichnung:";
+			this->label38->Text = L"Bauteilbezeichnung*";
 			// 
 			// panel2
 			// 
@@ -1244,12 +1307,50 @@ private: System::Windows::Forms::Label^  label13;
 			this->panel4->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->panel4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->panel4->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->panel4->Controls->Add(this->button15);
+			this->panel4->Controls->Add(this->button14);
+			this->panel4->Controls->Add(this->label22);
 			this->panel4->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->panel4->Location = System::Drawing::Point(43, 131);
 			this->panel4->Margin = System::Windows::Forms::Padding(4);
 			this->panel4->Name = L"panel4";
 			this->panel4->Size = System::Drawing::Size(1375, 902);
 			this->panel4->TabIndex = 4;
+			// 
+			// button15
+			// 
+			this->button15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button15->Location = System::Drawing::Point(680, 445);
+			this->button15->Name = L"button15";
+			this->button15->Size = System::Drawing::Size(116, 35);
+			this->button15->TabIndex = 83;
+			this->button15->Text = L"Beenden";
+			this->button15->UseVisualStyleBackColor = true;
+			this->button15->Click += gcnew System::EventHandler(this, &MainForm::button15_Click);
+			// 
+			// button14
+			// 
+			this->button14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button14->Location = System::Drawing::Point(487, 445);
+			this->button14->Name = L"button14";
+			this->button14->Size = System::Drawing::Size(116, 35);
+			this->button14->TabIndex = 82;
+			this->button14->Text = L"Starten";
+			this->button14->UseVisualStyleBackColor = true;
+			this->button14->Click += gcnew System::EventHandler(this, &MainForm::button14_Click);
+			// 
+			// label22
+			// 
+			this->label22->AutoSize = true;
+			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label22->Location = System::Drawing::Point(507, 365);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(270, 25);
+			this->label22->TabIndex = 81;
+			this->label22->Text = L"Lagersystem Verwaltung";
 			// 
 			// label4
 			// 
@@ -1279,6 +1380,17 @@ private: System::Windows::Forms::Label^  label13;
 			this->panel3->Size = System::Drawing::Size(1375, 902);
 			this->panel3->TabIndex = 4;
 			this->panel3->Visible = false;
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label13->Location = System::Drawing::Point(100, 52);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(147, 17);
+			this->label13->TabIndex = 80;
+			this->label13->Text = L"Suchbegriff eingeben:";
 			// 
 			// button13
 			// 
@@ -1402,6 +1514,7 @@ private: System::Windows::Forms::Label^  label13;
 			// 
 			// button3
 			// 
+			this->button3->Enabled = false;
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button3->Location = System::Drawing::Point(545, 56);
@@ -1413,21 +1526,9 @@ private: System::Windows::Forms::Label^  label13;
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &MainForm::button3_Click);
 			// 
-			// button4
-			// 
-			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(854, 56);
-			this->button4->Margin = System::Windows::Forms::Padding(4);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(119, 28);
-			this->button4->TabIndex = 6;
-			this->button4->Text = L"Menü";
-			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &MainForm::button4_Click);
-			// 
 			// button5
 			// 
+			this->button5->Enabled = false;
 			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button5->Location = System::Drawing::Point(1287, 51);
@@ -1436,11 +1537,13 @@ private: System::Windows::Forms::Label^  label13;
 			this->button5->Size = System::Drawing::Size(119, 39);
 			this->button5->TabIndex = 7;
 			this->button5->Text = L"Beenden";
+			this->button5->UseCompatibleTextRendering = true;
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &MainForm::button5_Click);
 			// 
 			// button7
 			// 
+			this->button7->Enabled = false;
 			this->button7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button7->Location = System::Drawing::Point(1129, 56);
@@ -1453,6 +1556,7 @@ private: System::Windows::Forms::Label^  label13;
 			// 
 			// button8
 			// 
+			this->button8->Enabled = false;
 			this->button8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button8->Location = System::Drawing::Point(990, 56);
@@ -1474,16 +1578,18 @@ private: System::Windows::Forms::Label^  label13;
 			this->pictureBox1->TabIndex = 11;
 			this->pictureBox1->TabStop = false;
 			// 
-			// label13
+			// label39
 			// 
-			this->label13->AutoSize = true;
-			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label39->AutoSize = true;
+			this->label39->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label13->Location = System::Drawing::Point(100, 52);
-			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(147, 17);
-			this->label13->TabIndex = 80;
-			this->label13->Text = L"Suchbegriff eingeben:";
+			this->label39->ForeColor = System::Drawing::Color::Red;
+			this->label39->Location = System::Drawing::Point(978, 289);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(326, 20);
+			this->label39->TabIndex = 85;
+			this->label39->Text = L"Bitte überprüfen sie die Pflichteingaben";
+			this->label39->Visible = false;
 			// 
 			// MainForm
 			// 
@@ -1495,27 +1601,28 @@ private: System::Windows::Forms::Label^  label13;
 			this->Controls->Add(this->button8);
 			this->Controls->Add(this->button7);
 			this->Controls->Add(this->button5);
-			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->panel3);
-			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel2);
+			this->Controls->Add(this->panel3);
+			this->Controls->Add(this->panel4);
 			this->DoubleBuffered = true;
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->HelpButton = true;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->Name = L"MainForm";
+			//this->Name = L"MainForm";
 			this->Text = L"Lagersystem";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
+			this->panel4->ResumeLayout(false);
+			this->panel4->PerformLayout();
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
@@ -1596,10 +1703,9 @@ private: System::Windows::Forms::Label^  label13;
 		speichern(kartei, anzahl);
 
 	}
-	private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
-		//Durch Klickevent ausfüllen der Ausgabe
 
-	}
+
+	
 	private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e) {
 		//Neu Button bei Eingabe-Tab
 
@@ -1818,7 +1924,7 @@ private: System::Windows::Forms::Label^  label13;
 			 else {
 				 strcpy(temp_neu_geb, "gebraucht");
 			 }
-			 comboBox_fill_text(comboBox24, temp_neu_geb);
+			 //comboBox_fill_text(comboBox24, temp_neu_geb);
 			 comboBox_fill_text_int(comboBox23, kartei[index].anzahl);
 			 comboBox_fill_text(comboBox22, kartei[index].lagerort);
 
@@ -1828,13 +1934,39 @@ private: System::Windows::Forms::Label^  label13;
 			 comboBox_fill_text_int(comboBox18, kartei[index].hersteller.plz);
 			 comboBox_fill_text(comboBox16, kartei[index].hersteller.ort);
 			 comboBox_fill_text(comboBox15, kartei[index].hersteller.internetseite);
+			 
 
 		 }
 
 private: System::Void dataGridView1_CellClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
-		ausgabe_eintragen(kartei, dataGridView1->CurrentCell->RowIndex);
-		
+
+	ausgabe_eintragen(kartei, dataGridView1->CurrentCell->RowIndex);
+
+	comboBox8->Text = System::Convert::ToString(dataGridView1->Rows[dataGridView1->CurrentCell->RowIndex]->Cells[0]->Value);
 }
+
+private: System::Void button15_Click(System::Object^  sender, System::EventArgs^  e) {
+	//Beenden
+	Close();
+}
+private: System::Void button14_Click(System::Object^  sender, System::EventArgs^  e) {
+	panel2->Visible = true;
+	panel2->Enabled = true;
+	panel1->Visible = false;
+	panel1->Enabled = false;
+	panel3->Visible = false;
+	panel3->Enabled = false;
+	panel4->Visible = false;
+	panel4->Enabled = false;
+
+	button1->Enabled = true;
+	button2->Enabled = true;
+	button3->Enabled = true;
+	button5->Enabled = true;
+	button7->Enabled = true;
+	button8->Enabled = true;
+}
+
 
 };
 }
