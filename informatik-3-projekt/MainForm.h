@@ -283,6 +283,7 @@ private: System::Windows::Forms::Label^  label39;
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label39 = (gcnew System::Windows::Forms::Label());
 			this->radioButton4 = (gcnew System::Windows::Forms::RadioButton());
 			this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
 			this->comboBox8 = (gcnew System::Windows::Forms::ComboBox());
@@ -392,7 +393,6 @@ private: System::Windows::Forms::Label^  label39;
 			this->columnHeader2 = (gcnew System::Windows::Forms::ColumnHeader());
 			this->columnHeader3 = (gcnew System::Windows::Forms::ColumnHeader());
 			this->columnHeader4 = (gcnew System::Windows::Forms::ColumnHeader());
-			this->label39 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -477,6 +477,19 @@ private: System::Windows::Forms::Label^  label39;
 			this->panel1->Size = System::Drawing::Size(1375, 902);
 			this->panel1->TabIndex = 2;
 			this->panel1->Visible = false;
+			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label39->ForeColor = System::Drawing::Color::Red;
+			this->label39->Location = System::Drawing::Point(978, 289);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(326, 20);
+			this->label39->TabIndex = 85;
+			this->label39->Text = L"Bitte überprüfen sie die Pflichteingaben";
+			this->label39->Visible = false;
 			// 
 			// radioButton4
 			// 
@@ -1578,19 +1591,6 @@ private: System::Windows::Forms::Label^  label39;
 			this->pictureBox1->TabIndex = 11;
 			this->pictureBox1->TabStop = false;
 			// 
-			// label39
-			// 
-			this->label39->AutoSize = true;
-			this->label39->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label39->ForeColor = System::Drawing::Color::Red;
-			this->label39->Location = System::Drawing::Point(978, 289);
-			this->label39->Name = L"label39";
-			this->label39->Size = System::Drawing::Size(326, 20);
-			this->label39->TabIndex = 85;
-			this->label39->Text = L"Bitte überprüfen sie die Pflichteingaben";
-			this->label39->Visible = false;
-			// 
 			// MainForm
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
@@ -1604,17 +1604,17 @@ private: System::Windows::Forms::Label^  label39;
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
+			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel3);
-			this->Controls->Add(this->panel4);
 			this->DoubleBuffered = true;
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->HelpButton = true;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			//this->Name = L"MainForm";
+			this->Name = L"MainForm";
 			this->Text = L"Lagersystem";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
